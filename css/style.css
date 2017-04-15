@@ -55,7 +55,18 @@ body, html {
 }
 
 @media screen and (max-width: 800px) {
-	
+	body{
+		color: #fff;
+		background: #262626;
+	}
+	#about h2{
+		color: #fff;
+	}
+	.barra-responsive{
+		background: #262626;
+		padding: 0px;
+		width: 100%;
+	}
 	.wthreexperience .animated {
 		background-size: contain;
 		margin-top: 20%;
@@ -74,8 +85,39 @@ body, html {
 
 
 @media screen and (max-width: 533px) {
+	
+	
+	body{
+		color: #fff;
+		background: #262626;
+	}
+	#about h2{
+		color: #fff;
+	}
+	
+	.slider a{
+		color: #262626;
+	}
+	body{
+
+		background: #262626;
+	}
+	.barra-responsive{
+		padding: 0px;
+		background: #262626;
+		width: 100%;
+		height: 100%;
+	}
+	.slider{
+		margin-top: 150px;
+	}
+	.rslides{
+		width: 100%;
+	}
 	.wthreexperience {
 		width: 60%;
+		height: 60vh;
+
 	}
 	.animated {
 		padding-top: 200px;
@@ -106,7 +148,7 @@ body, html {
 		margin-top: -45px;
 	}
 
-
+	
 	.callbacks_nav.next {
 		left: auto;
 		background-position: right top;
@@ -129,11 +171,10 @@ body, html {
 		left: 10px;
 		width: 20px;
 		height: 40px;
-		background: transparent url(../images/themes.gif) no-repeat -9px -10px;
+	
 	}
 	.callbacks_nav.next {
 		right: 10px;
-		background: transparent url(../images/themes.gif) no-repeat -47px -10px;
 	}
 }
 
@@ -168,7 +209,7 @@ p.intro {
 	line-height: 24px;
 }
 a {
-	color: #8eb640;
+	color: #fff;
 }
 a:hover, a:focus {
 	text-decoration: none;
@@ -248,6 +289,10 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 #menu.navbar-default .navbar-nav > li > a:hover {
 	color: #8eb640;
+}
+
+.letra_principal a{
+	
 }
 .on {
 	background-color: #262626 !important;
@@ -368,12 +413,19 @@ header .intro-text {
 	line-height: 24px;
 	margin: 15px 0 30px;
 }
+#about img{
+	width: 30em;
+	height: 25em;
+}
+
 /* Menu Section */
 #servicios {
 	padding: 0 0 60px 0;
 }
 #servicios .section-title {
-	background: #444 url(../img/intro-bg.jpg) center center no-repeat fixed;
+	background: #444 url(../img/menu-bg.jpg) center center no-repeat fixed;
+	background-size: cover;
+	margin-bottom: 50px;
 }
 #servicios .section-title h2 {
 	color: #fff;
@@ -423,6 +475,10 @@ header .intro-text {
 /* Portfolio Section */
 #portfolio {
 	padding: 0 0 120px 0;
+}
+.portfolio-items img{
+	width: 5em;
+	height: 15em;	
 }
 #portfolio .section-title {
 	background: #444 url(../img/intro-bg.jpg) center center no-repeat fixed;
@@ -569,7 +625,8 @@ ol.type li a:hover {
 	margin: 5px 0;
 }
 #team img {
-	width: 280px;
+	width: 12em;
+	height: 6em;	
 }
 #team .thumbnail {
 	background: transparent;
@@ -672,6 +729,7 @@ label {
 }
 #contact img{
 	    box-shadow: 15px 0 #ffffff;
+	    height: 1em;
 }
 #contact .lado_form{
 	color: #777;
