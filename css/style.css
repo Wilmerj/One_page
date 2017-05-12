@@ -24,6 +24,7 @@ body, html {
 		position: absolute;
 		display: none;
 		width: 100%;
+		height: 80%;
 		left: 0;
 		top: 0;
 	}
@@ -80,6 +81,7 @@ body, html {
 	.wthreelocationsaits figure.effect-zoe h4 {
 		font-size: 26px;
 	}
+
 	
 }
 
@@ -162,6 +164,7 @@ body, html {
 	.callbacks_nav.next {
 		right: 20px;
 	}
+}
 
 
 
@@ -259,6 +262,9 @@ hr {
 a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
 	outline: none;
 	outline-offset: none;
+}
+.home_sub{
+	font-style: italic;
 }
 /* Navigation */
 #menu {
@@ -384,6 +390,7 @@ header .intro-text {
 	padding-top: 250px;
 	padding-bottom: 200px;
 	text-align: center;
+	position: absolute;
 }
 /* About Section */
 #about {
@@ -394,6 +401,7 @@ header .intro-text {
 }
 #about .about-text {
 	margin-left: 10px;
+	text-align: justify;
 }
 #about .about-img {
 	display: inline-block;
@@ -414,8 +422,8 @@ header .intro-text {
 	margin: 15px 0 30px;
 }
 #about img{
-	width: 30em;
-	height: 25em;
+	width: 50em;
+	height: 35em;
 }
 
 /* Menu Section */
@@ -426,6 +434,7 @@ header .intro-text {
 	background: #444 url(../img/menu-bg.jpg) center center no-repeat fixed;
 	background-size: cover;
 	margin-bottom: 50px;
+	margin-top: 50px;
 }
 #servicios .section-title h2 {
 	color: #fff;
@@ -458,13 +467,14 @@ header .intro-text {
 }
 #servicios .menu-item-name {
 	font-weight: 600;
-	font-size: 17px;
+	font-size: 25px;
 	color: #555;
 	border-bottom: 2px dotted rgb(213, 213, 213);
 }
 #servicios .menu-item-description {
-	font-style: italic;
+	
 	font-size: 15px;
+	color: black;
 }
 #servicios .menu-item-price {
 	float: right;
@@ -600,23 +610,28 @@ ol.type li a:hover {
 }
 /* Team Section */
 #team {
-	color: #fff;
-	background: #444 url(../img/team-bg.jpg) center top no-repeat fixed;
+	padding-bottom: 100px;
+}
+#team .section-title {
+	background: #444 url(../img/team-bg.jpg) center center no-repeat fixed;
 	background-size: cover;
+	margin-bottom: 50px;
+}
+#team .section-title h2{
+	color: #fff;
 }
 
-#team .section-title{
-	background: transparent;
-}
-#team .overlay {
-	padding: 120px 0 80px 0;
-	background: rgba(0, 0, 0, 0.6);
-}
 #team h2, #team p {
 	color: #fff;
 }
 #team hr {
-	background: #fff;
+	    height: 2px;
+    width: 70px;
+    text-align: center;
+    position: relative;
+    background: #8eb640;
+    margin-bottom: 40px;
+    border: 0;
 }
 #team h3 {
 	color: #fff;
@@ -625,12 +640,14 @@ ol.type li a:hover {
 	margin: 5px 0;
 }
 #team img {
-	width: 12em;
-	height: 6em;	
+	width: 15em;
+	height: 6em;
+	box-shadow: 0px 0 #ffffff;
+	margin-top: 20px;
 }
 #team .thumbnail {
-	background: transparent;
 	border: 0;
+
 }
 #team .thumbnail .team-img {
 	display: inline-block;
@@ -646,41 +663,35 @@ ol.type li a:hover {
 	left: 8px;
 	border: 0px solid rgba(255, 255, 255, 0.2);
 }
+
+#el_dorado img{
+	width: 25em; 
+	height: 3em;
+}
+
+#colsubsidio img{
+	width: 25em;
+	height: 4em;
+}
+#grane img{
+	width: 12em;
+	height: 6em;
+}
+
+#arturo img{
+	width: 11em;
+	height: 6em;
+}
 /* Call Reservation Section */
-#call-reservation {
-	padding: 90px 0;
-	color: #fff;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8eb640+50,779936+100 */
-	background: rgb(142,182,64); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(142,182,64,1) 50%, rgba(119,153,54,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, rgba(142,182,64,1) 50%, rgba(119,153,54,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(142,182,64,1) 50%, rgba(119,153,54,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8eb640', endColorstr='#779936', GradientType=0 ); /* IE6-9 */
-}
-#call-reservation .overlay {
-	padding: 80px 0;
-	background: #8eb640;
-}
-#call-reservation h2 {
-	font-family: 'Open Sans', sans-serif;
-	color: #fff;
-	font-weight: 400;
-	margin: 0;
-}
-#call-reservation hr {
-	background: #fff;
-}
-#call-reservation h3 {
-	color: #fff;
-	font-weight: 500;
-	font-size: 20px;
-	margin: 5px 0;
-}
+
+
 /* Contact Section */
 #contact {
 	background-size: cover;
 	padding: 100px 0 60px 0;
+	padding-top: 0px;
 }
+
 #contact h1{
 	color: black;
 }
@@ -690,12 +701,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8eb640', end
 	font-family: 'Open Sans', sans-serif;
 }
 #contact .section-title{
-	background: #fff;
+	
+	background: #444 url(../img/team-bg.jpg) center center no-repeat fixed;
+	background-size: cover;
 }
 #contact form {
 	padding: 0;
 }
-#contact h3 {
+#contact h4 {
 	font-family: 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	font-size: 20px;

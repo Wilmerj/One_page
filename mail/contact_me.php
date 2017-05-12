@@ -1,5 +1,7 @@
 <?php
+/*
 // Check for empty fields
+echo '<script type="text/javascript>alert("Llene todos los campos");</script>"';
 if(empty($_POST['Nombre'])  		||
    empty($_POST['email']) 		||
    empty($_POST['Inquietudes'])	||
@@ -20,7 +22,20 @@ if(empty($_POST['Nombre'])  		||
         'Reply-To: wilmerj1996@gmail.com' . "\r\n" .
         'X-Mailer: PHP/' .phpversion(); // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
     mail($para,$email_address,$cuerpo_msj,$headers);
-    echo '<script type="text/javascript>alert("Su mensaje a sido enviado");</script>"';
     header('Location: ../index.html');
-}	
+}	*/
+/*
+$destino = "wilmerj1996@gmail.com";
+$asunto =  "Mensaje enviado desde pagina web";
+$comentario = "
+  Email: $_POST['email']
+  Comentario: $_POST['Inquietudes']
+";
+$headers = 'From: '.$_POST['email']."\r\n".
+            'Reply-To'.$_POST['email']."\r\n".
+            'X-Mailer: PHP/'.phpversion();
+
+  mail($destino, $asunto, $comentario,  $headers);
+  echo "Mensaje enviado";*/
+  header('Location: ../index.html')
 ?>
