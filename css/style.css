@@ -81,6 +81,26 @@ body, html {
 	.wthreelocationsaits figure.effect-zoe h4 {
 		font-size: 26px;
 	}
+	#servicios .menu-section .menu-item .menu-item-description {
+	color: #fff;
+	}
+	#servicios .menu-section .menu-item .menu-item-name {
+	color: #fff;
+	}
+
+	#about .about-img img{
+	width: 200px;
+	height: 200px;
+	margin-left: 40%;
+	}
+	#about .about-img:before {
+	border: none;
+	margin-left: 40%;
+}
+	#portfolio .portfolio-items img{
+	width: 250px;
+	height: 120px;	
+}
 
 	
 }
@@ -95,6 +115,12 @@ body, html {
 	}
 	#about h2{
 		color: #fff;
+	}
+	#servicios .menu-section .menu-item .menu-item-description {
+	color: #fff;
+	}
+	#servicios .menu-section .menu-item .menu-item-name {
+	color: #fff;
 	}
 	
 	.slider a{
@@ -164,6 +190,8 @@ body, html {
 	.callbacks_nav.next {
 		right: 20px;
 	}
+
+	
 }
 
 
@@ -406,16 +434,6 @@ header .intro-text {
 #about .about-img {
 	display: inline-block;
 	position: relative;
-}
-#about .about-img:before {
-	display: block;
-	content: '';
-	position: absolute;
-	top: 8px;
-	right: 8px;
-	bottom: 8px;
-	left: 8px;
-	border: 1px solid rgba(255, 255, 255, 0.5);
 }
 #about p {
 	line-height: 24px;

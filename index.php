@@ -10,8 +10,8 @@
 <!-- Favicons
     ================================================== -->
 
-<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/logo.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/logo.png">
 
 <!-- Bootstrap -->
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css" media="all">
@@ -116,21 +116,22 @@
 <!-- Navigation
     ==========================================-->
 <!--Seccion acerca de nosotros -->
-<div id="about">`
+<div id="about">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-6 ">
-        <div class="about-img"><img src="img/about.png" alt="" class="img-responsive" ></div>
-      </div>
-      <div class="col-xs-12 col-md-6">
-      <br><br><br><br><br>
         <div class="about-text">
           <h2>QUIENES SOMOS</h2>
           <hr>
           <p>Somos un grupo de arquitectos, especializados en  mantenimiento locativo aeroportuario y en general, diseñamos y realizamos espacios interiores, abarcando principalmente los diferentes tipos de áreas comerciales y residenciales, todo esto siempre llevando a cabo toda la coordinación técnica necesaria para la perfecta concepción de cada proyecto.</p>
+      </div>
+       </div>
+      <div class="col-xs-12 col-md-6">
+       <div class="about-img"><img src="img/about.png" alt="" class="img-responsive" ></div>
+        
           
         </div>
-      </div>
+     
     </div>
   </div>
 </div>
@@ -579,7 +580,7 @@
         <div class="col-md-6 col-xs-12">
         <b>+57 311 458 44 07 </b></div><br><br>
          <div class="col-md-12 col-xs-12">
-         <b>CORREO: addaadsdas@amasc.com  | PBX: 3719914</b>
+         <b>CORREO: info@arqmasconstruccion.com  | PBX: 3719914</b>
          </div> 
         </div>
         </li>
@@ -587,15 +588,41 @@
       </div>
       </div>
         <div class="col-md-3 col-xs-12">
-           <form class="form-horizontal" method="POST" action="mail/contact_me.php">
+           <form class="form-horizontal" method="POST" action="">
          
             <h4>Formulario</h4>
             <br><br><br>
-            <input type="text" class="form-control" id="Nombre" placeholder="Nombre" >
-            <br><input type="email" class="form-control" id="email" placeholder="email">
-            <br><textarea id="Inquietudes" placeholder="Inquietudes" class="form-control"></textarea>
-            <br><button type="submit" class="btn btn-success" id="btn_enviar">Enviar</button>
+            <input type="text" class="form-control" name="name" placeholder="Nombre" >
+            <br><input type="email" class="form-control" name="email" placeholder="E_mail">
+            <br><textarea name="Inquietudes" placeholder="Inquietudes" class="form-control"></textarea>
+            <br><input name="send" type="submit" class="btn btn-success" value="Enviar">
           </form>
+          <?php 
+          if ($_POST['send'] ) {
+          
+            if (empty($_POST['name'])&&empty($_POST['email'])&&empty($_POST['Inquietudes'])) {
+               echo '<script type="text/javascript">alert("Llene todos los campos")</script>';
+            }else{
+            if(isset($_POST['email'])) {
+              $email_to= "info@arqmasconstruccion.com";   
+              $email_subject = "Contact from PSP Landing Page:";
+              $email_from ="Pagina web";
+
+              $email_message = "Details from the contact form:\n\n";
+              $email_message .= "Name: " . $_POST['name'] . "\n";
+              $email_message .= "E-mail: " . $_POST['email'] . "\n";
+              $email_message .= "Asunto: " . $_POST['Inquietudes'] . "\n";
+               
+              $headers = 'From: '.$email_from."\r\n".
+              'Reply-To: '.$email_from."\r\n" .
+              'X-Mailer: PHP/' . phpversion();
+              mail($email_to, $email_subject, $email_message, $headers);
+              echo '<script type="text/javascript">alert("Mensaje enviado satisfactoriamente")</script>';
+              }
+              }
+            }
+            ?>
+
       </div>  
      
       </div>
